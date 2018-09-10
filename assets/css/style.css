@@ -1,0 +1,35 @@
+.jumbotron {
+
+    text-align: center; 
+    background-color: red; 
+}
+
+img {
+
+    width: 50%;
+    height: auto; 
+    float: left; 
+    padding: 0; 
+    margin: 0px; 
+    background-size: 100%;
+    
+}
+
+p {
+    text-align: center; 
+    font-size: 24px; 
+    width: 400px; 
+    background-color: gold; 
+}
+
+button {
+
+    width: 10%; 
+    padding: 0;
+   
+}
+
+.randnum {
+
+    font-size: 24px; 
+}

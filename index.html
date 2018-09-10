@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    
+</head>
+<body>
+    <div class="jumbotron"><h1>Crystal Collectors</h1></div>
+    <p id ="Inst"> To begin the game a random number is automatically generated. <br>
+        Start by clicking a crystal below. Each crystal is assigned a different value which is hidden until the crystal is clicked. <br>
+        Once you click on the crystal you will receive a random amount of points. You win the game once the amount of points you have scored is equal to the random number. <br>
+        You lose the game if the amount of points you score is greater than the random number generated. </p> <br> 
+<h3 id = "randnum"> </h3>
+
+<h3 id = "wins">Wins</h3> <br> 
+<h3 id = "loss">Losses</h3><br>
+<div id = "crystals">
+        <button onclick="clickFunction()" id="c1"><img src="assets/images/black_crystal.jpg"></button>
+        <button onclick="clickFunction()" id="c2"><img src="assets/images/green_crystal.jpg"></button>
+        <button onclick="clickFunction()" id="c3"><img src="assets/images/red_crystal.jpg"></button>
+        <button onclick="clickFunction()" id="c4"><img src="assets/images/sapphire.jpg"></button>
+</div>
+<h3>Your total score is:</h3> <br>
+<h4 id ="ts"></h4>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
