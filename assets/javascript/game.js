@@ -1,28 +1,44 @@
 //set where window will randomly generate number
 window.onload = generateRandomNumber; 
+var totalScore = 0; 
+var randNum = 0;
 function generateRandomNumber() {
-
+randNum = Math.floor(Math.random()* 10) + 120; 
+    
     document.getElementById("randnum").innerHTML = "Target Score: " + randNum++; 
-
+console.log('randNum', randNum);  
 }
 
-function clickFunction() {
 
-       userC = document.getElementById("ts").innerHTML = Math.floor(Math.random() *10) + 14;
-       randNum ++;
-       console.log(userC);
-       
-    }
-//initialized variables for the start of the game
 var wins = 0;
 var losses = 0;
-var randNum = Math.floor(Math.random() * 19) + 120;
-//attempted to get score to increment by adding the userC and randNum variables together
-var totalScore = randNum ++; 
-console.log(totalScore);
+var cTwoValue = Math.floor(Math.random() * 1) + 10;
+var cThreeValue = Math.floor(Math.random() * 1) + 5;
+var cFourValue = Math.floor(Math.random() * 1) + 9;
+var cOneValue = Math.floor(Math.random() * 1) + 6;
 
-//series of if statements to count wins and losses. 
-if (randNum > totalScore) {
+totalScore += randNum;
+
+
+
+
+
+//Remainder of pseudo-code 
+//Increment user clicks to crystals to correlate to increase of points
+//Set statements to trigger events when score reaches a certain threshold to end game via alert
+//Shorthand Javascript statements to incorporate JQuery
+
+$('#c1').on('click', function() {
+
+console.log('clickc1');
+
+totalScore += cOneValue;
+
+document.getElementById('ts').innerText = (totalScore += cOneValue);
+
+console.log("totalscore", totalScore); 
+
+if (totalScore > randNum) {
 
     losses++;
 
@@ -30,19 +46,94 @@ document.getElementById("loss").innerText = ("Losses: " + losses++);
                 
 }
 
-if (randNum < totalScore) {
+else (randNum === totalScore) 
 
     wins++;
 
 document.getElementById("wins").innerText = ("Wins: " + wins++);
 }
 
-console.log(randNum);
-if (totalScore > randNum) {
-    
+);
 
-}
-//Remainder of pseudo-code 
-//Increment user clicks to crystals to correlate to increase of points
-//Set statements to trigger events when score reaches a certain threshold to end game via alert
-//Shorthand Javascript statements to incorporate JQuery
+$('#c2').on('click', function() {
+
+    console.log('clickc2');
+    
+    totalScore += cOneValue;
+
+    document.getElementById('ts').innerText = (totalScore += cTwoValue);
+    
+    console.log("totalscore", totalScore); 
+
+    if (totalScore > randNum) {
+
+        losses++;
+    
+    document.getElementById("loss").innerText = ("Losses: " + losses++);
+                    
+    }
+    
+    else (randNum === totalScore) 
+    
+        wins++;
+    
+    document.getElementById("wins").innerText = ("Wins: " + wins++);
+    }
+    
+    );
+
+    $('#c3').on('click', function() {
+
+        console.log('clickc3');
+        
+        totalScore += cOneValue;
+
+        document.getElementById('ts').innerText = (totalScore += cThreeValue);
+        
+        console.log("totalscore", totalScore); 
+
+        if (totalScore > randNum) {
+
+            losses++;
+        
+        document.getElementById("loss").innerText = ("Losses: " + losses++);
+                        
+        }
+        
+        else (randNum === totalScore) 
+        
+            wins++;
+        
+        document.getElementById("wins").innerText = ("Wins: " + wins++);
+        
+        
+        });
+
+        $('#c4').on('click', function() {
+
+            console.log('clickc4');
+            
+            totalScore += cOneValue;
+
+            document.getElementById('ts').innerText = (totalScore += cFourValue);
+            
+            console.log("totalscore", totalScore); 
+
+            if (totalScore > randNum) {
+
+                losses++;
+            
+            document.getElementById("loss").innerText = ("Losses: " + losses++);
+                            
+            }
+            
+            else (randNum === totalScore) 
+            
+                wins++;
+            
+            document.getElementById("wins").innerText = ("Wins: " + wins++);
+            }
+            
+            );
+
+           
